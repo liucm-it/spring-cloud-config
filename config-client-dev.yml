@@ -3,3 +3,6 @@ server:
 spring:
   application:
     name: config-client
+hello: 
+  name: hello world
+  age: 20
