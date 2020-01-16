@@ -1,0 +1,39 @@
+---
+spring:
+  application:
+    name: eureka-cluster
+  profiles: server1
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: server1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8002/eureka/,http://localhost:8003/eureka/
+---
+spring:
+  application:
+    name: eureka-cluster
+  profiles: server2
+server:
+  port: 8002
+eureka:
+  instance:
+    hostname: server2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/,http://localhost:8003/eureka/
+---
+spring:
+  application:
+    name: eureka-cluster
+  profiles: server3
+server:
+  port: 8003
+eureka:
+  instance:
+    hostname: server3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8002/eureka/,http://localhost:8001/eureka/
