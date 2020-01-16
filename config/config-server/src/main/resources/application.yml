@@ -7,9 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/liucm-it/spring-cloud-config.git
-#           git仓库地址下的相对地址，可以配置多个，用,分割
-#          search-paths: config-repo
+          uri: https://github.com/liucm-it/spring-cloud-demo.git
+#           git仓库地址下的相对地址，可以配置多个，用","分割
+          search-paths: config-repo
 #          公开仓库可以不用配置
 #          username: yourname   # git仓库的账号
 #          password: yourpass   # git仓库的密码
