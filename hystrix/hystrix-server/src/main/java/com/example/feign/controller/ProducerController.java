@@ -11,9 +11,14 @@ public class ProducerController {
 
     @RequestMapping("/hi")
     public String index(@RequestParam String name) {
-        if (!StringUtils.isBlank(name)) {
-            throw new RuntimeException("hi error");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+//        if (!StringUtils.isBlank(name)) {
+//            throw new RuntimeException("hi error");
+//        }
         return String.format("hello %s", name);
     }
 }

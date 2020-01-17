@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class FeignServerApplication {
+public class HystrixServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FeignServerApplication.class, args);
+		SpringApplication.run(HystrixServerApplication.class, args);
 	}
 
 }
