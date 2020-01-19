@@ -1,0 +1,23 @@
+test:
+  uri: https://www.kming6.com
+
+spring:
+  jmx:
+    enabled: false
+  cloud:
+    gateway:
+      routes:
+      - id: default_routes
+        uri: ${test.uri}
+        order: 9000
+        predicates:
+        - Path=/**
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
+
+management.endpoints.web.exposure.include: '*'

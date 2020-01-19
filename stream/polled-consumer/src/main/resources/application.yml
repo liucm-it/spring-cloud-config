@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: polledConsumerOut
+        input:
+          destination: polledConsumerIn
+          group: polledConsumerApplication
+          content-type: text/plain
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    addresses: localhost
